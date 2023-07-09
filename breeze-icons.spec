@@ -2,7 +2,7 @@
 
 Summary:	Breeze icon theme
 Name:		breeze-icons
-Version:	5.107.0
+Version:	5.108.0
 Release:	1
 License:	GPL
 Group:		Graphical desktop/KDE
@@ -40,6 +40,17 @@ Breeze icon theme. Compliant with FreeDesktop.org naming schema.
 %{_iconsdir}/breeze*/*.rcc
 %ghost %{_iconsdir}/breeze/icon-theme.cache
 %ghost %{_iconsdir}/breeze-dark/icon-theme.cache
+
+%package devel
+Summary:	Development files for the Breeze icon theme
+Group:		Graphical desktop/KDE
+Requires:	%{name} = %{EVRD}
+
+%description devel
+Development files for the Breeze icon theme
+
+%files devel
+%{_libdir}/cmake/KF5BreezeIcons
 
 #-----------------------------------------------------------------------------
 
