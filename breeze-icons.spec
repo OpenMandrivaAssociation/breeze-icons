@@ -1,5 +1,8 @@
 %define stable %([ "$(echo %{version} |cut -d. -f3)" -ge 70 ] && echo -n un; echo -n stable)
 
+# Workaround for debug problems
+%define _empty_manifest_terminate_build 0
+
 Summary:	Breeze icon theme
 Name:		breeze-icons
 Version:	5.116.0
